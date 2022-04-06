@@ -1,0 +1,16 @@
+.header{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, auto);
+    color: #fff;
+    padding: 90px 25px 25px 25px;
+    background-color: rgba(0, 0, 0, 0.212);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+.span{
+    position: absolute;
+    top: 50px;
+    right: 50px;
+    color: rgb(0, 255, 200);
+}

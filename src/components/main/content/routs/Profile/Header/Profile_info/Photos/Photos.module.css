@@ -1,0 +1,52 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.wrapper{
+    max-height: 150px;
+    margin-top: 20px;
+    overflow: hidden;
+}
+.photos{
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.301);
+    border-right: 60px solid rgba(0, 0, 0, 0.274);
+    border: 3px solid rgba(0, 0, 0, 0.37);
+    padding-right: 60px;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+}
+.photos_wrapper{
+    height: 100%;
+    width: 200%;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    z-index: 1;
+}
+.photo{
+    height: 100%;
+    object-fit: cover;
+    margin-right: 2px;
+    cursor: pointer;
+    z-index: 1;
+}
+.plus{
+    position: absolute;
+    height: 100%;
+    width: 50px;
+    top: 0;
+    right: 0;
+    font-size: 29px;
+    text-align: center;
+    padding-top: 55px;
+    font-weight: 300;
+    color: #fff;
+    backdrop-filter: blur(10px);
+    background: linear-gradient(90deg, rgba(0, 255, 157, 0.288), rgba(0, 255, 242, 0.26));
+    cursor: pointer;
+    z-index: 2;
+}

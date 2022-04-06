@@ -1,0 +1,73 @@
+.Main_info_wrapper{
+    color: #fff;
+    margin-left: 30px;
+    padding: 0;
+}
+.FIO{
+    font-size: 28px;
+    font-weight: 400;
+    position: relative;
+    color: #fff;
+}
+.FIO::before{
+    content: 'ссылка на мой ВК';
+    position: absolute;
+    font-size: 15px;
+    top: 0px;
+    opacity: 0;
+    transition: 0.4s;
+    color: rgb(0, 195, 255);
+}
+.status{
+    font-size: 20px;
+    margin: 5px 0 0 20px;
+    position: relative;
+}
+.status::before{
+    content: '';
+    width: 5px;
+    height: 5px;
+    background-color: #fff;
+    border-radius: 50%;
+    position: absolute;
+    top: 12px;
+    left: -15px;
+}
+.FIO:hover::before{
+    opacity: 1;
+    top: -15px;
+}
+.info_wrapper{
+    margin-top: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.192);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.192);
+    display: grid;
+    grid-template-columns: 200px auto auto;
+    grid-template-rows: 1fr;
+}
+.emoji{
+    font-size: 20px;
+}
+.property{
+    display: flex;
+    width: 200px;
+    flex-direction: column;
+    padding: 15px 0;
+}
+.value{
+    display: flex;
+    flex-direction: column;
+    padding: 15px 0;
+    width: 100%;
+}
+.info{
+    margin-bottom: 10px;
+    display: inline;
+}
+.acc_info h4{
+    margin-bottom: 10px;
+}
+.acc_info{
+    border-left: 1px solid rgba(255, 255, 255, 0.192);
+    padding: 15px 0 0 20px;
+}

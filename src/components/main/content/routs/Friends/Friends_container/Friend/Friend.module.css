@@ -1,0 +1,41 @@
+.friend{
+    display: grid;
+    grid-template-columns: 50px auto;
+    font-size: 16px;
+    margin-top: 15px;
+}
+.friend_ava{
+    width: 45px;
+    height: 45px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.friend_name img{
+    width: 17px;
+    height: 17px;
+    object-fit: cover;
+    margin-left: 10px;
+}
+.friend_name{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    font-size: 18px;
+    padding-left: 10px;
+}
+.friend_name a{
+    cursor: pointer;
+    transition: 0s;
+}
+.friend_name a:hover{
+    color: rgba(0, 238, 255, 0.664);
+    border-bottom: 1px solid rgba(0, 238, 255, 0.664);
+}
+.friend_name:nth-child(2n):after {
+    margin-left: 10px;
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(0, 255, 128, 0.753);
+}

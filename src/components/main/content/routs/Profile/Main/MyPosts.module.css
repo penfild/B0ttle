@@ -1,0 +1,213 @@
+.posts{
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.212);
+    display: grid;
+    column-gap: 10px;
+    grid-template-columns: 40px auto 40px 40px 40px;
+}
+.new_post_ava{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.posts input{
+    background: transparent;
+    outline: none;
+    backdrop-filter: blur(10px);
+    border: none;
+    border-radius: 10px;
+    font-size: 17px;
+    padding-left: 15px;
+    color: #fff;
+}
+.posts input:hover{
+    background-color: rgba(255, 255, 255, 0.192);
+}
+.new_post_button{
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 110, 255, 0.308);
+}
+.new_post_files{
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 183, 255, 0.459);
+}
+.post_files{
+    margin-right: 5px;
+}
+.new_post_button:hover{
+    background-color: rgba(0, 255, 170, 0.788)
+}
+.new_post_button img{
+    width: 27px;
+    object-fit: cover;
+    margin-left: 5px;
+}
+#send{
+    background-color: rgba(0, 183, 255, 0.459)
+}
+#send:hover{
+    background-color: rgba(0, 255, 170, 0.788)
+}
+.post_wrapper{
+    padding: 25px;
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    margin-top: 10px;
+    background-color: rgba(0, 0, 0, 0.212);
+}
+.post_header{
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: 20px;
+    position: relative;
+}
+.post_ava{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.post_name{
+    display: flex;
+    text-align: left;
+    flex-direction: column;
+}
+.post_name_item{
+    display: inline-block;
+    margin-top: 5px;
+    font-size: 18px;
+    color: rgba(1, 247, 255, 0.856);
+}
+.post_time{
+    display: inline-block;
+}
+.post_move{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    top: 10px;
+    right: 0;
+    cursor: pointer;
+}
+.post_move .circle{
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+.post_move:hover .circle{
+    background-color: rgba(0, 255, 149, 0.76);
+    transition: 0.3s;
+}
+.post_move:active .circle{
+    background-color: rgb(0, 110, 255);
+}
+.post_content{
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto 35px;
+    border-radius: 10px;
+    row-gap: 15px;
+    position: relative;
+}
+.post_content .post_content_img{
+    width: 100%;
+    object-fit: cover;
+}
+.post_audio{
+    min-height: 37px;
+    background-color: rgba(0, 0, 0, 0.315);
+    border-radius: 8px;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 37px auto;
+    overflow: hidden;
+    column-gap: 5px;
+}
+.post_play{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(0, 183, 255, 0.459);
+    align-items: center;
+    cursor: pointer;
+}
+.post_play:hover{
+    background-color: rgba(0, 255, 170, 0.788);
+}
+.post_audio_play{
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 10px 0 10px 15px;
+    border-color: transparent transparent transparent #ffffffbe;
+    margin-left: 5px;
+}
+.post_play:hover > .post_audio_play{
+    border-color: transparent transparent transparent #000000b6;
+}
+.post_audio_name{
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+.post_audio_name span{
+    color: rgba(0, 225, 255, 0.815);
+    margin-right: 5px;
+}
+.post_audio_name span:hover{
+    border-bottom: 1px solid rgba(0, 225, 255, 0.815);
+}
+.post_reactions{
+    display: grid;
+    grid-template-columns: repeat(3, 20px);
+    column-gap: 33px;
+    margin-top: 30px;
+}
+.post_reactions svg{
+    width: 32px;
+    height: 32px;
+    padding: 4px;
+    cursor: pointer;
+}
+.post_reactions svg:hover{
+    background-color: rgba(0, 255, 170, 0.788);
+    border-radius: 10px;
+}
+.views{
+    position: absolute;
+    bottom: 25px;
+    right: 25px;
+    display: flex;
+    align-items: center;
+}
+.views img{
+    width: 23px;
+    object-fit: cover;
+    margin-right: 7px;
+}
+.post_description{
+    display: inline;
+    font-size: 16px;
+    color: #fff;
+}

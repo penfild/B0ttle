@@ -1,0 +1,25 @@
+.friends{
+    text-decoration: none;
+}
+.friends .heading{
+	padding: 25px;
+	background-color: rgba(0, 0, 0, 0.226);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+.heading h2{
+	width: 100%;
+    margin-left: 40px;
+	position: relative;
+	font-size: 22px;
+}
+.heading h2::before {
+	content: '';
+	width: 23px;
+	height: 23px;
+	background: url('https://image.flaticon.com/icons/png/512/747/747579.png') top center no-repeat;
+	background-size: 23px;
+	position: absolute;
+	bottom: 2px;
+	left: -35px;
+}

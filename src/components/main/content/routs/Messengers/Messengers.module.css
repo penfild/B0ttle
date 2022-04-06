@@ -1,0 +1,62 @@
+.messengers{
+    padding: 25px;
+	background-color: rgba(0, 0, 0, 0.226);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+}
+.message{
+    min-height: 80px;
+    background-color: rgba(0, 0, 0, 0.411);
+    border-radius: 15px;
+    margin-bottom: 10px;
+    display: grid;
+    grid-template-columns: 50px auto;
+    column-gap: 15px;
+    padding: 10px;
+    cursor: pointer;
+}
+.message:hover{
+    background-color: rgba(6, 255, 193, 0.274);
+}
+.message:hover .message_content_wrapper{
+    background-color: rgba(0, 92, 168, 0.39);
+}
+.message_img_wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.message_img{
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.message_heading{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    row-gap: 10px;
+}
+.message_content_wrapper{
+    padding: 10px 55px 10px 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.384);
+    position: relative;
+}
+.message_content{
+    display: inline-block;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    -webkit-box-orient: vertical;
+}
+.message_time{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+img[src='https://cdn-icons-png.flaticon.com/512/1215/1215074.png?w=1380'] {
+    border-radius: 0;
+}

@@ -1,0 +1,43 @@
+.Ava{
+    min-height: 150px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+.Avatar{
+    min-width: 100px;
+    min-height: 100px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+.button{
+    font-size: 10px;
+    font-weight: 400;
+    letter-spacing: 0px;
+    max-width: 100px;
+    margin-top: 15px;
+    padding: 8px 0;
+    display: inline-block;
+    background-color: #fff;
+    cursor: pointer;
+    border-radius: 7px;
+    background: linear-gradient(60deg, rgba(0, 253, 135, 0.705), rgba(0, 195, 255, 0.918));
+    color: #000;
+    transition: 0.4s;
+}
+.button:first-child{
+    margin-top: 15px;
+}
+.button:hover{
+    transform: translateY(-4px);
+    box-shadow: 0px 4px 5px 0px rgba(0, 0, 0, 0.753);
+}
+.acc_id{
+    position: absolute;
+    top: -65px;
+    left: 0;
+    font-size: 22px;
+    font-weight: 400;
+    color: rgba(0, 238, 255, 0.651);
+}

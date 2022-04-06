@@ -1,0 +1,101 @@
+.Mlst{
+	position: fixed;
+	top: 85px;
+	right: calc(50% + 430px);
+	width: 200px;
+	height: 200px;
+	overflow: hidden;
+	background-color: rgba(0, 0, 0, 0.233);
+	backdrop-filter: blur(20px);
+	border-radius: 15px;
+	z-index: 100;
+}
+.wrapper{
+	width: 200px;
+	height: 100%;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(5, auto);
+}
+.Mlst .wrapper a{
+	position: relative;
+	height: 100%;
+	width: 100%;
+	font-size: 17px;
+	letter-spacing: 0.5px;
+	display: flex;
+	align-items: center;
+	text-align: left;
+	line-height: 30px;
+	margin: auto 0;
+	padding: 0 10px;
+}
+.Mlst .wrapper a:hover{
+	background-color: rgba(0, 238, 255, 0.507);
+}
+.Mlst .wrapper svg{
+	margin-right: 10px;
+}
+/* #page::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url('https://cdn-icons-png.flaticon.com/512/875/875610.png?w=1380') top center no-repeat;
+	background-size: 20px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+#friends::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url('https://cdn-icons-png.flaticon.com/512/931/931990.png?w=1380') top center no-repeat;
+	background-size: 20px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+#messengers::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url('https://cdn-icons-png.flaticon.com/512/1219/1219883.png?w=1380') top center no-repeat;
+	background-size: 20px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+#music::before {
+	content: '';
+	width: 20px;
+	height: 20px;
+	background: url('https://cdn-icons-png.flaticon.com/512/1001/1001298.png?w=1380') top center no-repeat;
+	background-size: 20px;
+	position: absolute;
+	bottom: 10px;
+	left: 10px;
+}
+#settings::before {
+	content: '';
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	background: url('https://cdn-icons-png.flaticon.com/512/1160/1160885.png?w=1380') top center no-repeat;
+	background-size: 20px;
+	bottom: 10px;
+	left: 10px;
+} */
+@media screen and (max-width: 1300px) {
+	.Mlst{
+		width: 40px;
+	}
+	.Mlst:hover{
+		width: 200px;
+		right: calc(50% + 270px);
+		background-color: rgba(0, 0, 0, 0.651);
+	}
+}
+.activeLink{
+	background-color: rgba(0, 255, 255, 0.507);
+}
