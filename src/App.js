@@ -9,7 +9,7 @@ import {
 } from 'react-router-dom';
 import './index.css';
 import {addNewPost, sendMessage, subscribe } from './redux/state';
-import state from './redux/state'
+import store from './redux/state'
 
 
 
@@ -22,7 +22,7 @@ function App() {
 					<div className="lol"></div>
 				</div>
 				<Header />
-				<Main state={state} addNewPost={ addNewPost } sendMessage={ sendMessage }/>
+				<Main state={store.getState} addNewPost={ store.addNewPost } sendMessage={ store.sendMessage }/>
 			</div>
 		</Router>
 	);
