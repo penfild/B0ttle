@@ -8,9 +8,8 @@ import {
 	Link,
 } from 'react-router-dom';
 import './index.css';
-import store from './redux/redux-store';
-import {addNewPost, sendMessage } from './redux/state';
-
+import {addNewPost, sendMessage, subscribe } from './redux/state';
+import state from './redux/state'
 
 
 

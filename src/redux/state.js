@@ -1,5 +1,6 @@
-import {rerenderEntireTree} from '../render'
-
+let rerenderEntireTree = () => {
+    console.log('awdawd');
+}
 let state = {
     srcs : [
         { img : 'https://sun9-5.userapi.com/impg/aCgoYGDrtJ0Ci5oFwHz13V5dnasrXYf1l178GQ/gp6ysrIzWk0.jpg?size=1024x768&quality=96&sign=5c207424feee8fd21a851adc316933b9&type=album', post_description: 'Post Description lol'},
@@ -63,6 +64,9 @@ export let sendMessage = (messageText) => {
         state.user_id_1.push(newMessage);
         rerenderEntireTree(state)
     }
-    
+}
+
+export const subscribe = (observer) => {
+    rerenderEntireTree = observer
 }
 export default state
