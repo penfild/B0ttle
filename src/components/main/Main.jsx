@@ -5,7 +5,7 @@ import Container from './content/container/Container.jsx';
 const Main = (props) => {
     return (
         <main className={classes.main}>
-            <Container state={props.state} addNewPost={props.addNewPost} sendMessage={ props.sendMessage }/>
+            <Container state={props.getState()} addNewPost={props.store.addNewPost()} sendMessage={ props.store.sendMessage() }/>
         </main>
     )
 }

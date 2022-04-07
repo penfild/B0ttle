@@ -12,7 +12,7 @@ const Container = (props) => {
         <div className={classes.Container}>
             <SideBar />
             <Routes>
-                <Route path='/profile' element={<Profile state={props.state} addNewPost={ props.addNewPost} sendMessage={ props.sendMessage} /> }/>
+                <Route path='/profile' element={<Profile state={props.getState()} addNewPost={ props.addNewPost()} sendMessage={ props.sendMessage()} /> }/>
                 <Route path='/friends' element={<Friends />} />
                 <Route path='/messengers' element={<Messengers state={props.state} sendMessage={ props.sendMessage}/>} />
                 <Route path='/messangerpage' element={<MessangerPage state={props.state} sendMessage={ props.sendMessage } /* src={props.state.messages.src} sender={props.state.messages.sender} user_id={props.state.messages.user_id}  *//> } />

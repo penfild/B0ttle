@@ -22,7 +22,7 @@ function App() {
 					<div className="lol"></div>
 				</div>
 				<Header />
-				<Main state={store.getState} addNewPost={ store.addNewPost } sendMessage={ store.sendMessage }/>
+				<Main state={store}/>
 			</div>
 		</Router>
 	);
