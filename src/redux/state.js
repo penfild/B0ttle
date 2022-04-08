@@ -77,4 +77,16 @@ let store = {
         }
     }
 }
+const SEND_MESSAGE = 'SEND_MESSAGE'
+const ADD_POST = 'ADD_POST'
+
+
+export const sendMessageActionCreator = (messageSomeText) => 
+({ type: SEND_MESSAGE, messageText: messageSomeText})
+
+
+export const addPostActionCreator = (postText) => 
+({ type: ADD_POST, postText: postText});
+
+
 export default store

@@ -1,8 +1,7 @@
 import React from 'react'
 import classes from './Message.module.css'
 import store from '../../../../../../redux/state'
-
-
+import {sendMessageActionCreator} from '../../../../../../redux/state'
 
 
 
@@ -24,7 +23,7 @@ const MessangerPage = () => {
 
     let sendSomeMessage = () => {
         let messageSomeText = addMessage.current.value;
-        store.dispatch({type: 'SEND_MESSAGE', messageText: messageSomeText});
+        store.dispatch(sendMessageActionCreator(messageSomeText));
         addMessage.current.value = ''
     }
     return (

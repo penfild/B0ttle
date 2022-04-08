@@ -1,14 +1,14 @@
 import React from 'react'
 import classes from './MyPosts.module.css'
 import store from '../../../../../../redux/state'
+import {addPostActionCreator} from '../../../../../../redux/state'
 
 const MyPosts = () => {
     
     let addNewPostButton = React.createRef();
-
     let addPost = () => {
         let postText = addNewPostButton.current.value;
-        store.dispatch({type: 'ADD_POST', postText: postText});
+        store.dispatch(addPostActionCreator(postText));
         addNewPostButton.current.value = ''
     }
     const imgContent = store._state.srcs.map(s => (
