@@ -22,7 +22,7 @@ function App() {
 					<div className="lol"></div>
 				</div>
 				<Header />
-				<Main state={store}/>
+				<Main state={store} dispatch={store.dispatch}/>
 			</div>
 		</Router>
 	);

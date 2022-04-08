@@ -44,32 +44,37 @@ let store = {
         ]
     
     },
-    getState() {
+    getlolState() {
         return this._state
     },
     rerenderEntireTree() {
         console.log('awdawd');
     },
-    addNewPost (postText) {
-        let state = this.getState()
-        let newPost = {
-            img : 'https://sun9-25.userapi.com/impf/5am-OIp84dhDu3CBUNniO8IiDsAB7lNiWY1LyQ/FIFXC5y3jAo.jpg?size=2437x1440&quality=95&sign=01a2a3bb09d366b3c5706ab1afbf2b48&type=album',
-            post_description: postText,
-        }
-        state.srcs.unshift(newPost);
-        this.rerenderEntireTree(state)
-    },
-    sendMessage(messageText){
-        let newMessage = {
-            message_2: messageText
-        }
-        if (messageText != ''){
-            this.getState().user_id_1.push(newMessage);
-            this.rerenderEntireTree(this.getState())
-        }
-    },
     subscribe(observer){
         this.rerenderEntireTree = observer
+    },
+
+    ADD_POST : 'ADD_POST',
+    SEND_MESSAGE : 'SEND_MESSAGE',
+
+    dispatch(action) {
+        if (action.type =='ADD_POST'){
+            let newPost = {
+                img : 'https://sun9-25.userapi.com/impf/5am-OIp84dhDu3CBUNniO8IiDsAB7lNiWY1LyQ/FIFXC5y3jAo.jpg?size=2437x1440&quality=95&sign=01a2a3bb09d366b3c5706ab1afbf2b48&type=album',
+                post_description: action.postText,
+            }
+            this._state.srcs.unshift(newPost);
+            this.rerenderEntireTree(this._state)
+        }
+        if (action.type == 'SEND_MESSAGE') {
+            let newMessage = {
+                message_2: action.messageText
+            }
+            if (action.messageText != ''){
+                this._state.user_id_1.push(newMessage);
+                this.rerenderEntireTree(this._state)
+             }
+        }
     }
 }
 export default store

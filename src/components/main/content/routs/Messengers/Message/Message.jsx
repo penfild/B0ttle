@@ -1,16 +1,16 @@
 import React from 'react'
 import classes from './Message.module.css'
+import store from '../../../../../../redux/state'
 
 
 
 
 
 
+const MessangerPage = () => {
 
-const MessangerPage = (props) => {
 
-
-    const drawMessages = props.state.user_id_1.map(s => (
+    const drawMessages = store._state.user_id_1.map(s => (
         <div className={classes.lol_wrap}>
             <div className={classes.message_item}>
                 <p className={classes.no_my_message}>{s.message_1}</p>
@@ -24,7 +24,7 @@ const MessangerPage = (props) => {
 
     let sendSomeMessage = () => {
         let messageSomeText = addMessage.current.value;
-        props.sendMessage(messageSomeText);
+        store.dispatch({type: 'SEND_MESSAGE', messageText: messageSomeText});
         addMessage.current.value = ''
     }
     return (

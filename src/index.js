@@ -5,14 +5,14 @@ import App from './App';
 import store from './redux/state'
 
 
-let rerenderEntireTree = (store) => {
+let rerenderEntireTree = () => {
     ReactDOM.render(
       <React.StrictMode>
-        <App state={store} addNewPost={store.addNewPost} sendMessage={store.sendMessage}/>
+        <App state={store.getlolState()} dispatch={store.dispatch}/>
       </React.StrictMode>,
       document.getElementById('root')
     );
 }
-rerenderEntireTree(store)
+rerenderEntireTree(store.getlolState())
 
 store.subscribe(rerenderEntireTree)

@@ -1,9 +1,10 @@
 import React from 'react'
 import classes from './Messengers.module.css' 
 import { NavLink } from 'react-router-dom';
+import store from '../../../../../redux/state'
 
-const Messengers = (props) => {
-    const someMessage = props.state.messagesInfo.map(s => (
+const Messengers = () => {
+    const someMessage =store._state.messagesInfo.map(s => (
         <NavLink to='/messangerpage' className={classes.message} /* src={s.src} sender={s.sender} user_id={s.user_id} */>
             <div className={classes.message_img_wrapper}>
                 <img className={classes.message_img} src={s.sender_ava} alt="img" />

@@ -1,18 +1,17 @@
 import React from 'react'
 import classes from './MyPosts.module.css'
+import store from '../../../../../../redux/state'
 
-
-const MyPosts = (props) => {
+const MyPosts = () => {
     
     let addNewPostButton = React.createRef();
 
     let addPost = () => {
         let postText = addNewPostButton.current.value;
-        props.addNewPost(postText);
+        store.dispatch({type: 'ADD_POST', postText: postText});
         addNewPostButton.current.value = ''
     }
-
-    const imgContent = props.state.srcs.map(s => (
+    const imgContent = store._state.srcs.map(s => (
         <div className={classes.post_wrapper}>
                 <header className={classes.post_header}>
                     <img className={classes.post_ava} src="https://i.ytimg.com/vi/rxumDo4Z6PY/maxresdefault.jpg" alt="img" />
